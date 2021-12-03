@@ -10,7 +10,7 @@ on:
         default: "https://raw.githubusercontent.com/topjohnwu/magisk-files/canary/app-debug.apk"
       gapps_variant:
         description: "Variants of gapps. Should be: [none, aroma, super, stock, full, mini, micro, nano, pico, tvstock, tvmini]"
-        required: true
+        required: false
         default: "none"
       root_sol:
         description: "Root soluction. Should be: [magisk, none]"
@@ -22,7 +22,7 @@ jobs:
     runs-on: ubuntu-20.04
     strategy:
       matrix:
-        arch: [x64, arm64]
+        arch: [x64]
     steps:
       - name: Dependencies
         run: |
